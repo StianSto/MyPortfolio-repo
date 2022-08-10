@@ -40,7 +40,7 @@ main {
 .hero--top {
     position: absolute;
     right: 0;
-    width: 60vw;
+    width: 50vw;
     height: 100vh;
     background: url(../assets/hero-picture.png) no-repeat;
     background-size: cover;   
@@ -95,21 +95,18 @@ main {
     background-color: orange;
 }
 
+li:hover {
+    transform: translateY(-2rem);
+    cursor: pointer;
+}
+
 @keyframes slide-in {
     0% {transform: translateX(700%); gap: 700%;}
     100% {transform: translateX(0%); gap: 1rem;}
-    /* 85% {transform: translateX(-5%);} */
 }
 
 @keyframes hero-top-slidein {
-    100% {transform: translateX(0%);}
-}
-
-
-.navigation > *:hover {
-    transform: translateY(-2rem);
-    cursor: pointer;
-
+    100% {transform: translateX(0%) translateY(0);}
 }
 
 .hero--bottom {
@@ -118,22 +115,22 @@ main {
     bottom: 0;
     right: 0;
     transform-origin: top right;
-    transform: rotate(-10deg);
+    transform: rotate(-10deg) translatey(150%) translateX(50%);
+    animation: hero-bottom-slidein 1000ms 2050ms ease-in-out forwards;
 }
 
 .hero--bottom--space {
     position: relative;
     left: -20%;
     width: 120%;
-    height: 50vh;
+    height: 40vh;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     background-color: cyan;
-    transform: translatey(150%) translateX(50%);
-    animation: hero-bottom-slidein 1000ms 2050ms ease-in-out forwards;
+    transform: rotate(0deg);
 }
 
 @keyframes hero-bottom-slidein {
-    100% {transform: translatey(0%) translateX(0%);}
+    100% {transform: translateX(0) translateY(0) rotate(-10deg);}
 }
 
 .hero--bottom--space::after {
@@ -141,10 +138,11 @@ main {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    height: 70%;
-    bottom: -50%;
+    height: 40%;
+    bottom: 0%;
+    left: 0%;
     transform: rotate(5deg);
-    transform-origin: bottom-left;
+    transform-origin: 0 100%;
 }
 
 * {

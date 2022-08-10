@@ -110,9 +110,12 @@ main {
 }
 
 .hero--bottom {
+    --heroRotate: -10deg;
+    --hero-margin: ;
+    margin-bottom: var(--hero-margin);
     width: 100%;
     transform-origin: top right;
-    transform: rotate(-10deg) translatey(150%) translateX(50%);
+    transform: rotate(var(--heroRotate)) translatey(150%) translateX(50%);
     animation: hero-bottom-slidein 1000ms 2050ms ease-in-out forwards;
 }
 

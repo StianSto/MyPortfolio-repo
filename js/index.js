@@ -28,3 +28,4 @@ window.addEventListener('scroll', function parallax() {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+

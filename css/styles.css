@@ -34,7 +34,6 @@ main {
     min-height: 100vh;
     background: var(--clr-main-primary);
     color: white;
-    z-index: -1;
 }
 
 .hero--top {
@@ -54,11 +53,12 @@ main {
 }
 
 .hero--middle {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: max(0.5rem, 10vw);
+    padding-top: 10%;
     opacity: 0;
     animation: appear-opacity 700ms 2700ms ease forwards;
 }
@@ -74,6 +74,7 @@ main {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     gap: 1rem;
     animation: slide-in 1000ms 2800ms forwards;
     transform: translateX(700%);
@@ -81,23 +82,22 @@ main {
 
 .navigation > * {
     position: relative;
-    top: 3rem;
-    padding: 1rem 2rem 3rem; 
+    bottom: 0;
+    padding: 1em 1.5em 0em; 
     background: white;
-    font-size: 1.25rem;
+    font-size: 2vw;
     color: var(--clr-main-primary);
     border-radius: 10px 10px 0 0 ;
     white-space: nowrap;
     transition: all 200ms ease-in-out;
 }
 
-.navigation *:first-child {
-    background-color: orange;
+.navigation > a:hover {
+    padding: 1em 1.5em 2em;
 }
 
-li:hover {
-    transform: translateY(-2rem);
-    cursor: pointer;
+.navigation > *:first-child {
+    background-color: orange;
 }
 
 @keyframes slide-in {
@@ -110,10 +110,7 @@ li:hover {
 }
 
 .hero--bottom {
-    position: absolute;
     width: 100%;
-    bottom: 0;
-    right: 0;
     transform-origin: top right;
     transform: rotate(-10deg) translatey(150%) translateX(50%);
     animation: hero-bottom-slidein 1000ms 2050ms ease-in-out forwards;

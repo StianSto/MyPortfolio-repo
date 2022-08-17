@@ -110,12 +110,12 @@ main {
 }
 
 .hero--bottom {
-    --heroRotate: -10deg;
+    --hero-rotate: -10deg;
     --hero-margin: ;
     margin-bottom: var(--hero-margin);
     width: 100%;
     transform-origin: top right;
-    transform: rotate(var(--heroRotate)) translatey(150%) translateX(50%);
+    transform: rotate(var(--hero-rotate)) translatey(150%) translateX(50%);
     animation: hero-bottom-slidein 1000ms 2050ms ease-in-out forwards;
 }
 
@@ -123,7 +123,8 @@ main {
     position: relative;
     left: -20%;
     width: 120%;
-    height: 40vh;
+    aspect-ratio: 5 / 1;
+    min-height: 30vh;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     background-color: cyan;
     transform: rotate(0deg);
@@ -138,7 +139,7 @@ main {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    height: 40%;
+    height: 12vw;
     bottom: 0%;
     left: 0%;
     transform: rotate(5deg);
@@ -358,6 +359,9 @@ footer {
 @media only screen and (max-width :769px){
     .project {
         flex-flow: column nowrap;
+    }
+    .about-me__descrp {
+        min-width: 50vw;
     }
 }
 

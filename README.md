@@ -1,3 +1,3 @@
 # MyPortfolio-repo
 
-this is my portfoliogit branch
+this is my portfolio
